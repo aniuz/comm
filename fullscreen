@@ -1,0 +1,17 @@
+ob.full_screen = function (id) {
+        //var de = document.documentElement;
+        //var de = document.body;
+        var de = document.getElementById(id);
+        if (de.requestFullscreen) {
+            de.requestFullscreen();
+        } else if (de.mozRequestFullScreen) {
+            de.mozRequestFullScreen();
+        } else if (de.webkitRequestFullScreen) {
+            de.webkitRequestFullScreen();
+        } else if (de.msRequestFullscreen) {
+            de.msRequestFullscreen();
+        }
+        else {
+            wtx.info("当前浏览器不支持全屏！");
+        }
+    }
